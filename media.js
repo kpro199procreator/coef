@@ -6,8 +6,8 @@ function ajustarContenido() {
     const altoVentana = window.innerHeight;
 
     // Dimensiones base de referencia del diseño
-    const anchoBase = 1920; // Diseño base en ancho
-    const altoBase = 1080; // Diseño base en alto
+    const anchoBase = 480; // Diseño base en ancho
+    const altoBase = 360; // Diseño base en alto
 
     // Escala según las proporciones de la ventana
     const escalaX = anchoVentana / anchoBase;
