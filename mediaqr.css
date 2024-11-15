@@ -1,0 +1,57 @@
+/* Media Query para dispositivos pequeños (móviles) */
+@media (max-width: 600px) {
+    body {
+        font-size: 0.9rem; /* Ajuste de fuente para pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    h3 {
+        font-size: 0.9em;
+    }
+
+    /* Espacio entre secciones */
+    .content > section {
+        margin-bottom: 1em;
+    }
+}
+
+/* Media Query para dispositivos medianos (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 1rem; /* Tamaño de fuente ligeramente mayor */
+    }
+
+    h1, h2, h3 {
+        font-size: 1.4em;
+    }
+}
+
+/* Media Query para pantallas grandes (escritorio) */
+@media (min-width: 1025px) {
+    body {
+        font-size: 1.1rem;
+    }
+
+    .content {
+        max-width: 800px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+}
