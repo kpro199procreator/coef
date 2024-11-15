@@ -1,57 +1,61 @@
-/* Media Query para dispositivos pequeños (móviles) */
-@media (max-width: 600px) {
-    body {
-        font-size: 0.9rem; /* Ajuste de fuente para pantallas pequeñas */
-    }
-
-    h1 {
-        font-size: 1.2em;
-    }
-
-    h2 {
-        font-size: 1em;
-    }
-
-    h3 {
-        font-size: 0.9em;
-    }
-
-    /* Espacio entre secciones */
-    .content > section {
-        margin-bottom: 1em;
-    }
+/* Ajustes básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Media Query para dispositivos medianos (tabletas) */
-@media (min-width: 601px) and (max-width: 1024px) {
-    body {
-        font-size: 1rem; /* Tamaño de fuente ligeramente mayor */
-    }
-
-    h1, h2, h3 {
-        font-size: 1.4em;
-    }
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Sin scroll */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Media Query para pantallas grandes (escritorio) */
-@media (min-width: 1025px) {
-    body {
-        font-size: 1.1rem;
-    }
+/* Contenedor principal */
+.content {
+    width: 90vw; /* Escalable al 90% del ancho de la ventana */
+    height: 70vh; /* Escalable al 70% de la altura de la ventana */
+    background: #222;
+    border-radius: 10px;
+    padding: 5%; /* Espaciado relativo al tamaño del contenedor */
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
 
-    .content {
-        max-width: 800px;
-    }
+/* Tipografía dinámica */
+h1 {
+    color: #bb86fc;
+    font-size: calc(4vw + 1rem); /* Escala proporcional al ancho */
+    text-align: center;
+}
 
-    h1 {
-        font-size: 2em;
-    }
+p {
+    color: #e0e0e0;
+    font-size: calc(1.5vw + 0.5rem); /* Escala proporcional al ancho */
+    line-height: 1.5;
+    text-align: center;
+}
 
-    h2 {
-        font-size: 1.6em;
-    }
+/* Botones dinámicos */
+button {
+    background-color: #bb86fc;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    padding: calc(0.5vw + 0.5rem);
+    font-size: calc(1.2vw + 0.5rem); /* Ajusta con el tamaño de la pantalla */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-    h3 {
-        font-size: 1.3em;
-    }
+button:hover {
+    background-color: #e0aaff;
 }
