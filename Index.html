@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desviación Estándar y Coeficiente de Correlación</title>
+    
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   s
+</head>
+<body>
+    <div class="content">
+        <h1>Desviación Estándar y Coeficiente de Correlación</h1>
+
+        <section>
+            <h2>Desviación Estándar</h2>
+            <p>La desviación estándar es una medida de dispersión que indica cuánto se desvían los datos respecto a la media. La fórmula para la desviación estándar es:</p>
+            <p>$$ \sigma = \sqrt{\frac{1}{N} \sum_{i=1}^N (x_i - \bar{x})^2} $$</p>
+            <p>donde:</p>
+            <ul>
+                <li>\( N \): el número total de datos.</li>
+                <li>\( x_i \): cada valor individual en el conjunto de datos.</li>
+                <li>\( \bar{x} \): la media del conjunto de datos.</li>
+            </ul>
+
+            <h3>Ejemplo Básico</h3>
+            <p>Consideremos el conjunto de datos \( X = \\{3, 5, 7, 7, 9\\} \). Sigamos los pasos para calcular la desviación estándar:</p>
+            <ol>
+                <li>Calcular la media \( \bar{x} = \frac{3 + 5 + 7 + 7 + 9}{5} = 6.2 \).</li>
+                <li>Calcular \( (x_i - \bar{x})^2 \) para cada valor y luego la suma:
+                    <p>$$ (3 - 6.2)^2 + (5 - 6.2)^2 + (7 - 6.2)^2 + (7 - 6.2)^2 + (9 - 6.2)^2 = 26.8 $$</p>
+                </li>
+                <li>Dividir por \( N = 5 \) y luego tomar la raíz cuadrada:
+                    <p>$$ \sigma = \sqrt{\frac{26.8}{5}} \approx 2.32 $$</p>
+                </li>
+            </ol>
+
+            <h3>Ejemplo Avanzado</h3>
+            <p>Consideremos el conjunto de datos \( X = \{10, 12, 23, 23, 16, 23, 21, 16\} \). Vamos a calcular la desviación estándar:</p>
+            <ol>
+                <li>Calcular la media \( \bar{x} = \frac{10 + 12 + 23 + 23 + 16 + 23 + 21 + 16}{8} = 18 \).</li>
+                <li>Calcular \( (x_i - \bar{x})^2 \) para cada valor y luego la suma:
+                    <p>$$ (10 - 18)^2 + (12 - 18)^2 + (23 - 18)^2 + (23 - 18)^2 + (16 - 18)^2 + (23 - 18)^2 + (21 - 18)^2 + (16 - 18)^2 = 176 $$</p>
+                </li>
+                <li>Dividir por \( N = 8 \) y luego tomar la raíz cuadrada:
+                    <p>$$ \sigma = \sqrt{\frac{176}{8}} = 4.69 $$</p>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Coeficiente de Correlación de Pearson</h2>
+            <p>El coeficiente de correlación de Pearson mide la relación entre dos variables. Su fórmula es:</p>
+            <p>$$ r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \cdot \sum (y_i - \bar{y})^2}} $$</p>
+            <p>donde:</p>
+            <ul>
+                <li>\( x_i \) y \( y_i \): los valores individuales de las variables \( X \) y \( Y \).</li>
+                <li>\( \bar{x} \) y \( \bar{y} \): las medias de \( X \) y \( Y \).</li>
+            </ul>
+
+            <h3>Ejemplo Básico</h3>
+            <p>Consideremos los conjuntos de datos \( X = \{1, 2, 3, 4, 5\} \) y \( Y = \{2, 4, 6, 8, 10\} \). Vamos a calcular \\( r \\):</p>
+            <ol>
+                <li>Calcular \( \bar{x} = 3 \) y \( \bar{y} = 6 \).</li>
+                <li>Calcular \( (x_i - \bar{x})(y_i - \bar{y}) \) para cada par y luego la suma:
+                    <p>$$ \sum (x_i - \bar{x})(y_i - \bar{y}) = 20 $$</p>
+                </li>
+                <li>Calcular \( \sum (x_i - \bar{x})^2 = 10 \) y \( \sum (y_i - \bar{y})^2 = 40 \).</li>
+                <li>Calcular \( r \):
+                    <p>$$ r = \frac{20}{\sqrt{10 \cdot 40}} = 1 $$</p>
+                </li>
+            </ol>
+
+            <h3>Ejemplo Avanzado</h3>
+            <p>Consideremos los conjuntos de datos \( X = \{43, 21, 25, 42, 57, 59\} \) y \( Y = \{99, 65, 79, 75, 87, 81\} \):</p>
+            <ol>
+                <li>Calcular \( \bar{x} = 41 \) y \( \bar{y} = 81 \).</li>
+                <li>Calcular \( (x_i - \bar{x})(y_i - \bar{y}) \) para cada par y luego la suma:
+                    <p>$$ \sum (x_i - \bar{x})(y_i - \bar{y}) = 760 $$</p>
+                </li>
+                <li>Calcular \( \sum (x_i - \bar{x})^2 = 946 \) y \( \sum (y_i - \bar{y})^2 = 558 \).</li>
+                <li>Calcular \( r \):
+                    <p>$$ r = \frac{760}{\sqrt{946 \cdot 558}} \approx 0.894 $$</p>
+                </li>
+            </ol>
+        </section>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

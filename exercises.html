@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Estadística</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body class="bg-dark text-light">
+    <div class="container my-5">
+        <h1 class="text-center">Ejercicios de Estadística</h1>
+        <p>Resuelve los siguientes ejercicios y verifica tus respuestas.</p>
+
+        <!-- Ejercicio 1 -->
+        <div class="exercise" id="exercise1">
+            <h3>Ejercicio 1</h3>
+            <p>Calcula la media, mediana, moda, rango, desviación media, desviación estándar y coeficiente de correlación para los datos: [3, 5, 7, 9, 11].</p>
+            <label for="mean1">Media:</label><input type="text" id="mean1">
+            <label for="median1">Mediana:</label><input type="text" id="median1">
+            <label for="mode1">Moda:</label><input type="text" id="mode1">
+            <label for="range1">Rango:</label><input type="text" id="range1">
+            <label for="meanDev1">Desviación Media:</label><input type="text" id="meanDev1">
+            <label for="stdDev1">Desviación Estándar:</label><input type="text" id="stdDev1">
+            <label for="corrCoef1">Coeficiente de Correlación:</label><input type="text" id="corrCoef1">
+            <button onclick="checkAnswer(1, {mean: 7, median: 7, mode: 'N/A', range: 8, meanDev: 2.4, stdDev: 2.83, corrCoef: 'N/A'})">Comprobar Respuesta</button>
+            <p id="feedback1"></p>
+        </div>
+
+        <!-- Ejercicio 2 -->
+        <div class="exercise" id="exercise2">
+            <h3>Ejercicio 2</h3>
+            <p>Calcula la media, mediana, moda, rango, desviación media, desviación estándar y coeficiente de correlación para los datos: [10, 12, 14, 15, 17].</p>
+            <label for="mean2">Media:</label><input type="text" id="mean2">
+            <label for="median2">Mediana:</label><input type="text" id="median2">
+            <label for="mode2">Moda:</label><input type="text" id="mode2">
+            <label for="range2">Rango:</label><input type="text" id="range2">
+            <label for="meanDev2">Desviación Media:</label><input type="text" id="meanDev2">
+            <label for="stdDev2">Desviación Estándar:</label><input type="text" id="stdDev2">
+            <label for="corrCoef2">Coeficiente de Correlación:</label><input type="text" id="corrCoef2">
+            <button onclick="checkAnswer(2, {mean: 13.6, median: 14, mode: 'N/A', range: 7, meanDev: 2.56, stdDev: 2.59, corrCoef: 'N/A'})">Comprobar Respuesta</button>
+            <p id="feedback2"></p>
+        </div>
+
+        <!-- Ejercicio 3 -->
+        <div class="exercise" id="exercise3">
+            <h3>Ejercicio 3</h3>
+            <p>Calcula la media, mediana, moda, rango, desviación media, desviación estándar y coeficiente de correlación para los datos: [5, 10, 10, 15, 20].</p>
+            <label for="mean3">Media:</label><input type="text" id="mean3">
+            <label for="median3">Mediana:</label><input type="text" id="median3">
+            <label for="mode3">Moda:</label><input type="text" id="mode3">
+            <label for="range3">Rango:</label><input type="text" id="range3">
+            <label for="meanDev3">Desviación Media:</label><input type="text" id="meanDev3">
+            <label for="stdDev3">Desviación Estándar:</label><input type="text" id="stdDev3">
+            <label for="corrCoef3">Coeficiente de Correlación:</label><input type="text" id="corrCoef3">
+            <button onclick="checkAnswer(3, {mean: 12, median: 10, mode: 10, range: 15, meanDev: 4, stdDev: 6.32, corrCoef: 'N/A'})">Comprobar Respuesta</button>
+            <p id="feedback3"></p>
+        </div>
+
+        <!-- Ejercicio 4 -->
+        <div class="exercise" id="exercise4">
+            <h3>Ejercicio 4</h3>
+            <p>Calcula la media, mediana, moda, rango, desviación media, desviación estándar y coeficiente de correlación para los datos: [7, 13, 15, 20, 25].</p>
+            <label for="mean4">Media:</label><input type="text" id="mean4">
+            <label for="median4">Mediana:</label><input type="text" id="median4">
+            <label for="mode4">Moda:</label><input type="text" id="mode4">
+            <label for="range4">Rango:</label><input type="text" id="range4">
+            <label for="meanDev4">Desviación Media:</label><input type="text" id="meanDev4">
+            <label for="stdDev4">Desviación Estándar:</label><input type="text" id="stdDev4">
+            <label for="corrCoef4">Coeficiente de Correlación:</label><input type="text" id="corrCoef4">
+            <button onclick="checkAnswer(4, {mean: 16, median: 15, mode: 'N/A', range: 18, meanDev: 4.8, stdDev: 6.52, corrCoef: 'N/A'})">Comprobar Respuesta</button>
+            <p id="feedback4"></p>
+        </div>
+
+        <!-- Ejercicio 5 -->
+        <div class="exercise" id="exercise5">
+            <h3>Ejercicio 5</h3>
+            <p>Calcula la media, mediana, moda, rango, desviación media, desviación estándar y coeficiente de correlación para los datos: [4, 8, 12, 16, 20].</p>
+            <label for="mean5">Media:</label><input type="text" id="mean5">
+            <label for="median5">Mediana:</label><input type="text" id="median5">
+            <label for="mode5">Moda:</label><input type="text" id="mode5">
+            <label for="range5">Rango:</label><input type="text" id="range5">
+            <label for="meanDev5">Desviación Media:</label><input type="text" id="meanDev5">
+            <label for="stdDev5">Desviación Estándar:</label><input type="text" id="stdDev5">
+            <label for="corrCoef5">Coeficiente de Correlación:</label><input type="text" id="corrCoef5">
+            <button onclick="checkAnswer(5, {mean: 12, median: 12, mode: 'N/A', range: 16, meanDev: 4.8, stdDev: 5.83, corrCoef: 'N/A'})">Comprobar Respuesta</button>
+            <p id="feedback5"></p>
+        </div>
+
+        <!-- Ejercicio 6 -->
+        <div class="exercise" id="exercise6">
+            <h3>Ejercicio 6</h3>
+            <p>Calcula la media, mediana, moda, rango, desviación media, desviación estándar y coeficiente de correlación para los datos: [2, 4, 6, 8, 10].</p>
+            <label for="mean6">Media:</label><input type="text" id="mean6">
+            <label for="median6">Mediana:</label><input type="text" id="median6">
+            <label for="mode6">Moda:</label><input type="text" id="mode6">
+            <label for="range6">Rango:</label><input type="text" id="range6">
+            <label for="meanDev6">Desviación Media:</label><input type="text" id="meanDev6">
+            <label for="stdDev6">Desviación Estándar:</label><input type="text" id="stdDev6">
+            <label for="corrCoef6">Coeficiente de Correlación:</label><input type="text" id="corrCoef6">
+            <button onclick="checkAnswer(6, {mean: 6, median: 6, mode: 'N/A', range: 8, meanDev: 2.4, stdDev: 2.83, corrCoef: 'N/A'})">Comprobar Respuesta</button>
+            <p id="feedback6"></p>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer(exerciseNum, correctAnswers) {
+            const mean = parseFloat(document.getElementById(`mean${exerciseNum}`).value);
+            const median = parseFloat(document.getElementById(`median${exerciseNum}`).value);
+            const mode = document.getElementById(`mode${exerciseNum}`).value;
+            const range = parseFloat(document.getElementById(`range${exerciseNum}`).value);
+            const meanDev = parseFloat(document.getElementById(`meanDev${exerciseNum}`).value);
+            const stdDev = parseFloat(document.getElementById(`stdDev${exerciseNum}`).value);
+            const corrCoef = document.getElementById(`corrCoef${exerciseNum}`).value;
+
+            const feedback = document.getElementById(`feedback${exerciseNum}`);
+            let correct = true;
+            let feedbackMessage = "<ul>";
+
+            if (mean !== correctAnswers.mean) {
+                correct = false;
+                feedbackMessage += "<li>Media incorrecta.</li>";
+            } else {
+                feedbackMessage += "<li>Media correcta.</li>";
+            }
+
+            if (median !== correctAnswers.median) {
+                correct = false;
+                feedbackMessage += "<li>Mediana incorrecta.</li>";
+            } else {
+                feedbackMessage += "<li>Mediana correcta.</li>";
+            }
+
+            if (mode.toString() !== correctAnswers.mode) {
+                correct = false;
+                feedbackMessage += "<li>Moda incorrecta.</li>";
+            } else {
+                feedbackMessage += "<li>Moda correcta.</li>";
+            }
+
+            if (range !== correctAnswers.range) {
+                correct = false;
+                feedbackMessage += "<li>Rango incorrecto.</li>";
+            } else {
+                feedbackMessage += "<li>Rango correcto.</li>";
+            }
+
+            if (meanDev !== correctAnswers.meanDev) {
+                correct = false;
+                feedbackMessage += "<li>Desviación Media incorrecta.</li>";
+            } else {
+                feedbackMessage += "<li>Desviación Media correcta.</li>";
+            }
+
+            if (stdDev !== correctAnswers.stdDev) {
+                correct = false;
+                feedbackMessage += "<li>Desviación Estándar incorrecta.</li>";
+            } else {
+                feedbackMessage += "<li>Desviación Estándar correcta.</li>";
+            }
+
+            if (corrCoef.toString() !== correctAnswers.corrCoef) {
+                correct = false;
+                feedbackMessage += "<li>Coeficiente de Correlación incorrecto.</li>";
+            } else {
+                feedbackMessage += "<li>Coeficiente de Correlación correcto.</li>";
+            }
+
+            feedbackMessage += "</ul>";
+
+            if (correct) {
+                feedbackMessage = "<p class='text-success'>¡Todas las respuestas son correctas!</p>" + feedbackMessage;
+            } else {
+                feedbackMessage = "<p class='text-danger'>Algunas respuestas son incorrectas. Revisa e intenta de nuevo.</p>" + feedbackMessage;
+            }
+
+            feedback.innerHTML = feedbackMessage;
+        }
+    </script>
+</body>
+</html>
+
