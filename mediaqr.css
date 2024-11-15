@@ -13,7 +13,6 @@ body {
     height: 100vh; /* Ocupa toda la pantalla vertical */
     width: 100vw; /* Ocupa toda la pantalla horizontal */
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
