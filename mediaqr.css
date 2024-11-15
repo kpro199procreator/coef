@@ -1,20 +1,4 @@
-/* Ajustes básicos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: Arial, sans-serif;
-    overflow: hidden; /* Sin scroll */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
 /* Contenedor principal */
 .content {
