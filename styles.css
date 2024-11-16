@@ -24,29 +24,15 @@ input {
     padding: 5px;
     margin-bottom: 10px;
 }
-button {
-    background-color: #bb86fc;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #3700b3;
-}
 
-.boton {
+.button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 30px;
     background-color: #bb86fc;
     color: #121212;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 18px;
     text-align: center;
     transition: background-color 0.3s;
-}
-
-.boton:hover {
-    background-color: #e0aaff;
 }
